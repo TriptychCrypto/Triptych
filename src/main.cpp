@@ -1292,7 +1292,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 
     if(nHeight == 10)
     {
-        nSubsidy *= 20000;
+        nSubsidy *= 100000;
     }
 
     if(rand > 0 && rand < 60)
@@ -1305,40 +1305,36 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
     }
     if(rand > 80 && rand < 90)
     {
-        nSubsidy *= 5;
+        nSubsidy *= 3;
     }
     if(rand > 90 && rand < 95)
     {
-        nSubsidy *= 10;
+        nSubsidy *= 4;
     }
     if(rand > 95 && rand < 99)
     {
-        nSubsidy *= 20;
+        nSubsidy *= 5;
     }
     if(rand > 99 && rand < 101)
     {
-        nSubsidy *= 50;
+        nSubsidy *= 10;
     }
 
-    if(nHeight > 900000) 
-                nSubsidy = 0;
+    if(nHeight > 9000000000) 
+                nSubsidy = 2;
 			
-    if(nHeight > 915550)
-		        nSubsidy = (1 + rand) * COIN;
-
-
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 1 * 60; // 1 minutes (NUM_ALGOS * 30 seconds) readjusts difficulty
-static const int64 nTargetSpacing = 1 * 60; // 1 minutes (NUM_ALGOS * 30 seconds) between blocks
-static const int64 nInterval = 2; // retargets every 2 blocks
+static const int64 nTargetTimespan = 3 * 60; // 1x3 minutes (NUM_ALGOS * 30 seconds) readjusts difficulty
+static const int64 nTargetSpacing = 3 * 60; // 1x3 minutes (NUM_ALGOS * 30 seconds) between blocks
+static const int64 nInterval = 5; // retargets every 5 blocks
 
 static const int64 nAveragingInterval = 10; // 10 blocks
 static const int64 nAveragingTargetTimespan = nAveragingInterval * nTargetSpacing; // 15 minutes
 
-static const int64 nMaxAdjustDown = 5; // 5% adjustment down
-static const int64 nMaxAdjustUp = 5; // 5% adjustment up
+static const int64 nMaxAdjustDown = 25; // 25% adjustment down
+static const int64 nMaxAdjustUp = 25; // 25% adjustment up
 
 static const int64 nTargetTimespanAdjDown = nTargetTimespan * (100 + nMaxAdjustDown) / 100;
 
