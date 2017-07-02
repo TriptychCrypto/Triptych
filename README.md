@@ -2,31 +2,35 @@ Trinity
 ===================================
 
 
-What is Trinity?
+What is Triptych?
 ------------------
 
-Trinity is a new crypto-currency that includes three algorithms and random rewards.
+Triptych is a new crypto-currency that includes three algorithms and random rewards.
 
 Specifications
 ------------------
 
 - Proof of Work based. Mine using any of the 3 algorithms : sha256d(default), scrypt or groestl.
-- Difficulty is retargeted every 2 blocks.
-- 1 Minute Block Time
-- 1,680,000 Blocks
+- Difficulty is retargeted every 25blocks.
+- 3 Minute Block Time
+- Unlimited Blocks
 - Random Coins per Block Based on Probability
 	-Block Rewards:
 	- 61.5% chance of the reward being 1
 	- 20% chance of the reward being 2
-	- 10% chance of the reward being 5
-	- 5% chance of the reward being 10
-	- 2.5% chance of the reward being 20
-	- 1% chance of the reward being 50
+	- 10% chance of the reward being 3
+	- 5% chance of the reward being 4
+	- 2.5% chance of the reward being 5
+	- 1% chance of the reward being 10
+
+
+Reward is 3 coins after block 900000000 forever.
+
 
 License
 -------
 
-Trinity is released under the terms of the MIT license. See `COPYING` for more
+Triptych is released under the terms of the MIT license. See `COPYING` for more
 information or see http://opensource.org/licenses/MIT.
 
 Deps
